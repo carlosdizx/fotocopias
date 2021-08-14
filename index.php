@@ -39,7 +39,6 @@ include("docs/Conexion.php");
                 <tbody>
                     <?php
                         $sql = "SELECT * FROM facultades";
-                        $Conexion = new Conexion();
                         ?>
                     <tr>
                         <td>1</td>
