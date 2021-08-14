@@ -8,16 +8,16 @@ include_once("docs/conexion.php");
     <div class="row">
 
         <!-- Formulario de insercion de facultades -->
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Joder chaval!</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
         <div class="col-md-4">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Joder chaval!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
             <div class="card">
                 <div class="card-body">
-                    <form action="">
+                    <form action="./docs/facultad/agregar.php" method="post" autocomplete="off">
                         <div class="form-group">
-                            <input type="text" name="facultdad" id="" placeholder="Ingrese la facultdad" required>
+                            <input type="text" name="facultdad" id="facultdad" placeholder="Ingrese la facultdad" required>
                         </div>
                         <br />
                         <input type="submit" value="Agregar">
