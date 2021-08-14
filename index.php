@@ -1,7 +1,7 @@
 <?php
 include("docs/header.php");
 include("docs/nav.php");
-include("docs/conexion.php");
+include("docs/Conexion.php");
 ?>
 <!-- Espacio de HTML -->
 <div class="container p-4">
@@ -20,7 +20,7 @@ include("docs/conexion.php");
                             <input type="text" name="facultdad" id="" placeholder="Ingrese la facultdad" required>
                         </div>
                         <br />
-                        <input type="submit" value="Agregard">
+                        <input type="submit" value="Agregar">
                     </form>
                 </div>
             </div>
@@ -39,16 +39,13 @@ include("docs/conexion.php");
                 <tbody>
                     <?php
                         $sql = "SELECT * FROM facultades";
-                        $consulta = PDO::query($sql);
-                        for ($i = 0 ; i < $consulta->rows; $i++){
+                        $Conexion = new Conexion();
                         ?>
                     <tr>
                         <td>1</td>
                         <td>Facultad de Ingeniería</td>
                         <td>editar-eliminar</td>
                     </tr>
-                    }
-                <?php } ?>
                 </tbody>
             </table>
         </div>

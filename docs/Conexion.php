@@ -1,5 +1,5 @@
 <?php
-class conexion{
+class Conexion{
 
     // Variables de conexion
     private $servername = "localhost";
