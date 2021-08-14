@@ -1,1 +1,1 @@
-<?php
+<b>Barra de navegacion</b>
