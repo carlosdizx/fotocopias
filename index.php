@@ -15,7 +15,7 @@ include_once("docs/conexion.php");
             </div>
             <div class="card">
                 <div class="card-body">
-                    <form action="./docs/facultad/agregar.php" method="post" autocomplete="off">
+                    <form action="agregar.php" method="post" autocomplete="off">
                         <div class="form-group">
                             <input type="text" name="facultdad" placeholder="Ingrese la facultdad" required class="form-control" autofocus>
                         </div>
