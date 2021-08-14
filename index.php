@@ -31,7 +31,7 @@ include_once("docs/conexion.php");
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>No.</th>
+                        <th>ID.</th>
                         <th>Facultad</th>
                         <th>Acciones</th>
                     </tr>
@@ -44,8 +44,11 @@ include_once("docs/conexion.php");
                         ?>
                         <tr>
                             <td><?php echo $row['id'] ?></td>
-                            <td><?php echo $row['nombre'] ?></td>
-                            <td>editar-eliminar</td>
+                            <td><?=  $row['nombre'] ?></td>
+                            <td>
+                                <button class="btn btn-warning">Editar</button>
+                                <button class="btn btn-danger">Eliminar</button>
+                            </td>
                         </tr>
                 <?php } ?>
                 </tbody>
