@@ -1,7 +1,7 @@
 <?php
-include("lib/header.php");
-include("lib/nav.php");
-include_once("lib/conexion.php");
+include("docs/header.php");
+include("docs/nav.php");
+include_once("docs/conexion.php");
 ?>
 <!-- Espacio de HTML -->
 <div class="container p-4">
@@ -54,4 +54,4 @@ include_once("lib/conexion.php");
     </div>
 </div>
 
-<?php include("lib/footer.php"); ?>
+<?php include("docs/footer.php"); ?>
