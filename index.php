@@ -46,8 +46,12 @@ include_once("docs/conexion.php");
                             <td><?php echo $row['id'] ?></td>
                             <td><?=  $row['nombre'] ?></td>
                             <td>
-                                <button class="btn btn-warning">Editar</button>
-                                <button class="btn btn-danger">Eliminar</button>
+                                <button class="btn btn-warning">
+                                    <span class="mdi mdi-pencil-outline"></span>
+                                </button>
+                                <button class="btn btn-danger">
+                                    <span class="mdi mdi-trash-can-outline"></span>
+                                </button>
                             </td>
                         </tr>
                 <?php } ?>
