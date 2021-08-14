@@ -1,18 +1,25 @@
 <?php
+class conexion{
+
     // Variables de conexion
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "fotocopias";
+    private $servername = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $database = "fotocopias";
+    private $conexion;
 
-    // Creacion de cadena de conexion
-    $url = "mysql:host=".$this->server.";dbname=".$this->database.";charset=utf8";
+    public function __construct(){
+        // Creacion de cadena de conexion
+        $url = "mysql:host=".$this->servername.";dbname=".$this->database.";charset=utf8";
+        try {
+            $this->conexion = new PDO($url, $this->username, $this->password);
+            $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+        catch (Exception $e) {
+            $this->conexion = "error de conexion";
+            echo $e->getMessage();
+        }
+    }
 
-    try {
-        $conexion = new PDO($url, $username, $password);
-        $this.$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (Exception $e) {
-        $this->conexion = "error de conexion";
-        echo $e->getMessage();
-    }
+}
+
