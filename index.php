@@ -5,7 +5,12 @@ include("docs/nav.php");
 <!-- Espacio de HTML -->
 <div class="container p-4">
     <div class="row">
+
         <!-- Formulario de insercion de facultades -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Joder chaval!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -19,7 +24,26 @@ include("docs/nav.php");
                 </div>
             </div>
         </div>
+
         <!-- Tabla de facultades -->
+        <div class="col-md-8">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Facultad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Facultad de Ingeniería de Sistemas</td>
+                        <td>Editar/Borrar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
