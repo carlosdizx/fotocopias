@@ -6,6 +6,13 @@
     $database = "fotocopias";
 
     // Creacion de cadena de conexion
+    $url = "mysql:host=".$this->server.";dbname=".$this->database.";charset=utf8";
 
-    $conexion = new mysqli($servername,$username,$password,$database)
-        or die("Conexion fallo en el servidor de gestor de base de datos".$conexion->connect_error);
+    try {
+        $conexion = new PDO($url, $username, $password);
+        $this.$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch (Exception $e) {
+        $this->conexion = "error de conexion";
+        echo $e->getMessage();
+    }

@@ -1,6 +1,7 @@
 <?php
 include("docs/header.php");
 include("docs/nav.php");
+include("docs/conexion.php");
 ?>
 <!-- Espacio de HTML -->
 <div class="container p-4">
@@ -36,11 +37,18 @@ include("docs/nav.php");
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $sql = "SELECT * FROM facultades";
+                        $consulta = PDO::query($sql);
+                        for ($i = 0 ; i < $consulta->rows; $i++){
+                        ?>
                     <tr>
                         <td>1</td>
-                        <td>Facultad de Ingeniería de Sistemas</td>
-                        <td>Editar/Borrar</td>
+                        <td>Facultad de Ingeniería</td>
+                        <td>editar-eliminar</td>
                     </tr>
+                    }
+                <?php } ?>
                 </tbody>
             </table>
         </div>
