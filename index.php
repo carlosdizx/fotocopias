@@ -7,12 +7,17 @@ include_once("docs/conexion.php");
 <div class="container p-4">
     <div class="row">
 
-        <!-- Formulario de insercion de facultades -->
+
         <div class="col-md-4">
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Joder chaval!</strong>
+
+            <?php if(isset($_SESSION['mensaje'])){?>
+            <div class="alert alert-<?=$_SESSION['color']?> alert-dismissible fade show" role="alert">
+                <?=$_SESSION['mensaje']?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            <?php session_unset(); }?>
+
+            <!-- Formulario de insercion de facultades -->
             <div class="card">
                 <div class="card-body">
                     <form action="agregar_facultad.php" method="post" autocomplete="off">

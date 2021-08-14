@@ -10,6 +10,8 @@
         }
         else
         {
+            $_SESSION['mensaje'] ="Datos agregados correctamente";
+            $_SESSION['color'] ="success";
             header("Location:index.php");
         }
     }
