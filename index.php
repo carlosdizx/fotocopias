@@ -1,7 +1,7 @@
 <?php
-include("docs/header.php");
-include("docs/nav.php");
-include("docs/Conexion.php");
+include("lib/header.php");
+include("lib/nav.php");
+include_once("lib/conexion.php");
 ?>
 <!-- Espacio de HTML -->
 <div class="container p-4">
@@ -39,16 +39,19 @@ include("docs/Conexion.php");
                 <tbody>
                     <?php
                         $sql = "SELECT * FROM facultades";
+                        $consulta=mysqli_query($conexion,$sql)or die(mysqli_error($conexion));
+                        while($row=mysqli_fetch_array($consulta)){
                         ?>
-                    <tr>
-                        <td>1</td>
-                        <td>Facultad de Ingeniería</td>
-                        <td>editar-eliminar</td>
-                    </tr>
+                        <tr>
+                            <td><?php echo $row['id'] ?></td>
+                            <td><?php echo $row['nombre'] ?></td>
+                            <td>editar-eliminar</td>
+                        </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
 
-<?php include("docs/footer.php"); ?>
+<?php include("lib/footer.php"); ?>
