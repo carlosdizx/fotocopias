@@ -51,12 +51,12 @@ include_once("docs/conexion.php");
                             <td><?php echo $row['id'] ?></td>
                             <td><?=  $row['nombre'] ?></td>
                             <td>
-                                <button class="btn btn-warning">
+                                <a class="btn btn-warning" href="editar_facultad.php?id=<?=$row['id']?>">
                                     <span class="mdi mdi-pencil-outline"></span>
-                                </button>
-                                <button class="btn btn-danger">
+                                </a>
+                                <a class="btn btn-danger" href="eliminar_facultad.php">
                                     <span class="mdi mdi-trash-can-outline"></span>
-                                </button>
+                                </a>
                             </td>
                         </tr>
                 <?php } ?>

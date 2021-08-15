@@ -1,0 +1,8 @@
+{
+  "name": "fotocopias",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "sweetalert2": "^11.1.2"
+  }
+}
