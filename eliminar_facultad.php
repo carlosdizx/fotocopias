@@ -1,17 +1,17 @@
 <?php
     include("docs/conexion.php");
-    if(isset($_POST["agregar"]))
+    if (isset($_GET['id']))
     {
-        $miFacultad = $_POST['facultdad'];
-        $sql ="INSERT INTO facultades (nombre) VALUES ('$miFacultad');";
+        $id = $_GET['id'];
+        $sql = "DELETE FROM facultades WHERE id = $id";
         $consulta = mysqli_query($conexion,$sql);
         if (!$consulta){
-            die("La insercion no se pudo realizar".$conexion->error);
+            die("La facultad no se pudo eliminar, posiblemente la facultad tenga programas academicos agregados ".$conexion->error."");
         }
         else
         {
-            $_SESSION['mensaje'] ="Datos agregados correctamente";
-            $_SESSION['color'] ="success";
+            $_SESSION['mensaje'] ="Facultad eliminada correctamente";
+            $_SESSION['color'] ="danger";
             header("Location:index.php");
         }
     }

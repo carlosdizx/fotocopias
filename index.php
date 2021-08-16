@@ -33,7 +33,7 @@ include_once("docs/conexion.php");
 
         <!-- Tabla de facultades -->
         <div class="col-md-8">
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered" border="1">
                 <thead>
                     <tr>
                         <th>ID.</th>
@@ -54,7 +54,7 @@ include_once("docs/conexion.php");
                                 <a class="btn btn-warning" href="editar_facultad.php?id=<?=$row['id']?>">
                                     <span class="mdi mdi-pencil-outline"></span>
                                 </a>
-                                <a class="btn btn-danger" href="eliminar_facultad.php">
+                                <a class="btn btn-danger" href="eliminar_facultad.php?id=<?=$row['id']?>">
                                     <span class="mdi mdi-trash-can-outline"></span>
                                 </a>
                             </td>
