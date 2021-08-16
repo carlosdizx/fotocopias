@@ -24,6 +24,10 @@ if (isset($_GET['id'])) {
                             <input type="text" name="programa" placeholder="Ingrese el programa" required class="form-control" autofocus>
                         </div>
                         <br />
+                        <div class="form-group">
+                            <input type="text" name="director" placeholder="Director del programa" required class="form-control">
+                        </div>
+                        <br />
                         <input class="btn btn-success" type="submit" value="Agregar" name="agregar">
                     </form>
                 </div>
