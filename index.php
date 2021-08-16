@@ -49,9 +49,9 @@ include_once("docs/conexion.php");
                         ?>
                         <tr>
                             <td><?php echo $row['id'] ?></td>
-                            <td><?=  $row['nombre'] ?></td>
+                            <td><?= $row['nombre'] ?></td>
                             <td>
-                                <a class="btn btn-warning" href="editar_facultad.php?id=<?=$row['id']?>">
+                                <a class="btn btn-warning" href="editar_facultad.php?id=<?=$row['id']."?facultdad=".$row['nombre']?>">
                                     <span class="mdi mdi-pencil-outline"></span>
                                 </a>
                                 <a class="btn btn-danger" href="eliminar_facultad.php?id=<?=$row['id']?>">
