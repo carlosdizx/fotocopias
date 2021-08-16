@@ -3,6 +3,7 @@
     if (isset($_GET['id']))
     {
         $id = $_GET['id'];
+        $idFacultad = $_GET['codigo'];
         $sql = "DELETE FROM programas WHERE id = $id";
         $consulta = mysqli_query($conexion,$sql);
         if (!$consulta){
@@ -12,6 +13,6 @@
         {
             $_SESSION['mensaje'] ="Facultad eliminada correctamente";
             $_SESSION['color'] ="danger";
-            header("Location:/fotocopias/");
+            header("Location:/fotocopias/detalles_facultad.php?id=".$idFacultad);
         }
     }
