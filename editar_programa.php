@@ -8,10 +8,16 @@ include("docs/header.php");
                 <div class="card">
                     <h1>Editar programa acdemico</h1>
                     <div class="card-body">
-                        <form action="editar_programa_aux.php?id=<?=$_GET['id'] ?>" method="post" autocomplete="off">
+                        <form action="editar_programa_aux.php?id=<?=$_GET['id']."&facultdad=".$_GET['facultdad']?>" method="post" autocomplete="off">
+                            <div class="form-group">
+                                <input disabled name="facultdad" id="facultad" type="text"
+                                       value="<?= isset($_GET['facultdad']) ? "ID FACULTAD: ".$_GET['facultdad'] : 'Erorr, facultdad no encontranda' ?>"
+                                       class="form-control">
+                            </div>
+                            <br />
                             <div class="form-group">
                                 <input disabled name="id" type="text"
-                                       value="<?= isset($_GET['id']) ? $_GET['id'] : 'Erorr, programa no encontrando' ?>"
+                                       value="<?= isset($_GET['id']) ? "ID PROGRAMA: ".$_GET['id'] : 'Erorr, programa no encontrando' ?>"
                                        class="form-control">
                             </div>
                             <br />
