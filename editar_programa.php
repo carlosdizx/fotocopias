@@ -27,6 +27,12 @@ include("docs/header.php");
                                        required class="form-control">
                             </div>
                             <br />
+                            <div class="form-group">
+                                <input type="text" name="director" placeholder="Ingrese nombre del director"
+                                       value="<?= isset($_GET['director']) ? $_GET['director'] : 'Director Armando Bronca 😎' ?>"
+                                       required class="form-control">
+                            </div>
+                            <br />
                             <input class="btn btn-success" type="submit"
                                    value="<?= isset($_GET['id']) ? "Actualizar" : "Volver"  ?>"
                                    name="actualizar" />

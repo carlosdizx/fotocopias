@@ -52,7 +52,8 @@ if (isset($_GET['id'])) {
                                 <td><?= $row['nombre'] ?></td>
                                 <td><?= $row['director'] ?></td>
                                 <td>
-                                    <a href="editar_programa.php?id=<?=$row['id']."&programa=".$row['nombre']."&facultdad=".$_GET['id']?>" class="btn btn-warning">
+                                    <a href="editar_programa.php?id=<?=$row['id']."&programa=".$row['nombre']."&facultdad=".$_GET['id']."&director=".$row['director']?>"
+                                       class="btn btn-warning">
                                         <span class="mdi mdi-pencil-outline">Editar</span>
                                     </a>
                                     <a href="eliminar_programa.php?id=<?=$row['id']."&codigo=".$_GET['id']?>" class="btn btn-danger">
