@@ -48,7 +48,7 @@ include_once("docs/conexion.php");
                         while($row=mysqli_fetch_array($consulta)){
                         ?>
                         <tr>
-                            <td><?php echo $row['id'] ?></td>
+                            <td><a class="btn btn-primary" href="detalle_facultad.php?id=<?php echo $row['id'] ?>"><?php echo $row['id'] ?></a></td>
                             <td><?= $row['nombre'] ?></td>
                             <td>
                                 <a class="btn btn-warning" href="editar_facultad.php?id=<?=$row['id']."&facultdad=".$row['nombre']?>">
