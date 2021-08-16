@@ -3,10 +3,10 @@
     if (isset($_GET['id']))
     {
         $id = $_GET['id'];
-        $sql = "DELETE FROM facultades WHERE id = $id";
+        $sql = "DELETE FROM programas WHERE id = $id";
         $consulta = mysqli_query($conexion,$sql);
         if (!$consulta){
-            die("La facultad no se pudo eliminar, posiblemente la facultad tenga programas academicos agregados ".$conexion->error."");
+            die("El programa no se pudo eliminar, posiblemente tenga solicitudes de copias registradas ".$conexion->error."");
         }
         else
         {
