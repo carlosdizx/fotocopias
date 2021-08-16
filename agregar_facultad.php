@@ -12,6 +12,6 @@
         {
             $_SESSION['mensaje'] ="Datos agregados correctamente";
             $_SESSION['color'] ="success";
-            header("Location:index.php");
+            header("Location:/fotocopias/");
         }
     }

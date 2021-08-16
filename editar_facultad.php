@@ -1,18 +1,17 @@
 <?php
 include("docs/header.php");
 ?>
-
     <div class="p-4">
         <div class="row">
             <di class="col-md-4 mx-auto">
                 <div class="card">
                     <h1>Editar facultad</h1>
                     <div class="card-body">
-                        <form action="editar_facultad_aux.php" method="post" autocomplete="off">
+                        <form action="editar_facultad_aux.php?id=<?=$_GET['id'] ?>" method="post" autocomplete="off">
                             <div class="form-group">
-                                <input disabled name="id"
+                                <input disabled name="id" type="text"
                                        value="<?= isset($_GET['id']) ? $_GET['id'] : 'Erorr, facultdad no encontrada' ?>"
-                                       required class="form-control">
+                                       class="form-control">
                             </div>
                             <br />
                             <div class="form-group">

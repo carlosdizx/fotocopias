@@ -1,9 +1,9 @@
 <?php
 include_once("docs/conexion.php");
-    if(isset($_POST["actualizar"]))
+    if(isset($_POST["actualizar"]) && isset($_GET['id']))
     {
         $facultad = $_POST['facultdad'];
-        $id = $_POST['id'];
+        $id = $_GET['id'];
         $sql ="UPDATE facultades SET nombre = '$facultad' WHERE '$id' = id;";
         $consulta = mysqli_query($conexion,$sql);
         if (!$consulta){
@@ -11,8 +11,12 @@ include_once("docs/conexion.php");
         }
         else
         {
-            $_SESSION['mensaje'] ="Facutlad actulizada correctamente";
+            $_SESSION['mensaje'] ="Facultad actualizada correctamente";
             $_SESSION['color'] ="success";
-            header("Location:index.php");
+            header("Location:/fotocopias/");
         }
+    }
+    else
+    {
+        echo "No llego";
     }
