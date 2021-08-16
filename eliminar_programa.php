@@ -11,7 +11,7 @@
         }
         else
         {
-            $_SESSION['mensaje'] ="Facultad eliminada correctamente";
+            $_SESSION['mensaje'] ="Programa academico eliminado correctamente";
             $_SESSION['color'] ="danger";
             header("Location:/fotocopias/detalles_facultad.php?id=".$idFacultad);
         }
