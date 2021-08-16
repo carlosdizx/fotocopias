@@ -1,6 +1,5 @@
 <?php
 include("docs/header.php");
-include_once("docs/conexion.php");
 ?>
 
     <div class="p-4">
@@ -9,19 +8,22 @@ include_once("docs/conexion.php");
                 <div class="card">
                     <h1>Editar facultad</h1>
                     <div class="card-body">
-                        <form action="index.php" method="post" autocomplete="off">
+                        <form action="editar_facultad_aux.php" method="post" autocomplete="off">
                             <div class="form-group">
-                                <input type="number" disabled name="id"
-                                       value="<?php echo isset($_GET['id']) ? $_GET['id'] : 'Erorr facultdad no encontrado' ?>"
+                                <input disabled name="id"
+                                       value="<?= isset($_GET['id']) ? $_GET['id'] : 'Erorr, facultdad no encontrada' ?>"
                                        required class="form-control">
                             </div>
+                            <br />
                             <div class="form-group">
                                 <input type="text" name="facultdad" placeholder="Ingrese la facultdad"
-                                       value="<?php echo isset($_GET['facultdad']) ? $_GET['facultdad'] : 'La facultad de cristo rey 😎✌' ?>"
-                                       required class="form-control" autofocus>
+                                       value="<?= isset($_GET['facultdad']) ? $_GET['facultdad'] : 'Facultad de Cristo Rey ✌😎' ?>"
+                                       required class="form-control">
                             </div>
                             <br />
-                            <input class="btn btn-success" type="submit" value="Actualizar" name="actualizar">
+                            <input class="btn btn-success" type="submit"
+                                   value="<?= isset($_GET['id']) ? "Actualizar" : "Volver"  ?>"
+                                   name="actualizar" />
                         </form>
                     </div>
                 </div>
