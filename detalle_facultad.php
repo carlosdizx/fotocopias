@@ -15,11 +15,13 @@ if (isset($_GET['id'])) {
         ?>
         <div class="container p-4">
         <h1>Programas academicos</h1>
+
         <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>ID.</th>
                         <th>Facultad</th>
+                        <th>Director</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -29,9 +31,14 @@ if (isset($_GET['id'])) {
                     <tr>
                         <td><?= $row['id'] ?></td>
                         <td><?= $row['nombre'] ?></td>
+                        <td><?= $row['director'] ?></td>
                         <td>
-                            <a href="" class="btn btn-warning">Editar</a>
-                            <a href="" class="btn btn-danger">Eliminar</a>
+                            <a href="" class="btn btn-warning">
+                                <span class="mdi mdi-pencil-outline">Editar</span>
+                            </a>
+                            <a href="" class="btn btn-danger">
+                                <span class="mdi mdi-trash-can-outline">Eliminar</span>
+                            </a>
                         </td>
                     </tr>
                     <?php } ?>
