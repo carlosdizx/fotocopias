@@ -3,7 +3,7 @@ include("docs/header.php");
 include("docs/conexion.php");
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM programas WHERE id_facultad = '$id';";
+    $sql = "SELECT * FROM facultades WHERE id = '$id';";
     $consulta = mysqli_query($conexion,$sql);
     if(!$consulta){
         ?>
@@ -14,7 +14,13 @@ if (isset($_GET['id'])) {
     else{
         ?>
         <div class="container p-4">
-            <h1>Programas academicos</h1>
+            <?php while ($row = mysqli_fetch_array($consulta)) { ?>
+                <h1><?=$row['nombre']?></h1>
+            <?php }
+            $sql = "SELECT * FROM programas WHERE id_facultad = '$id';";
+            $consulta = mysqli_query($conexion,$sql);
+            ?>
+            <h4>Programas academicos</h4>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
