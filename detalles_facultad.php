@@ -13,8 +13,8 @@ if (isset($_GET['id'])) {
     <?php }
     else{
         ?>
-        <h1>Programas academicos</h1>
         <div class="container p-4">
+            <h1>Programas academicos</h1>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
                         <?php
                         while($row=mysqli_fetch_array($consulta)){ ?>
                             <tr>
-                                <td><a class="btn btn-primary" href=""><?= $row['id'] ?></a></td>
+                                <td><a class="btn btn-primary" href="detalles_programa.php?id=<?= $row['id'] ?>"><?= $row['id'] ?></a></td>
                                 <td><?= $row['nombre'] ?></td>
                                 <td><?= $row['director'] ?></td>
                                 <td>
