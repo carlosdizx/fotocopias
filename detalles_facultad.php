@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
                         <?php
                         while($row=mysqli_fetch_array($consulta)){ ?>
                             <tr>
-                                <td><?= $row['id'] ?></td>
+                                <td><a class="btn btn-primary" href=""><?= $row['id'] ?></a></td>
                                 <td><?= $row['nombre'] ?></td>
                                 <td><?= $row['director'] ?></td>
                                 <td>
