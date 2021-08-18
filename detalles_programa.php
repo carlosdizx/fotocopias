@@ -53,7 +53,7 @@ if (isset($_GET['id'])) {
                                     <a class="btn btn-warning" href="">
                                         Editar <span class="mdi mdi-pencil-outline"></span>
                                     </a>
-                                    <a class="btn btn-danger" href="">
+                                    <a class="btn btn-danger" href="eliminar_solicitud.php?id=<?= $row['id']."&codigo=".$_GET['id']?>">
                                         Eliminar <span class="mdi mdi-trash-can-outline"></span>
                                     </a>
                                 </td>
