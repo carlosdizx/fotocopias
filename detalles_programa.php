@@ -39,6 +39,7 @@ if (isset($_GET['id'])) {
                                 <th>Fecha</th>
                                 <th>Cantiad</th>
                                 <th>Material</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,6 +49,14 @@ if (isset($_GET['id'])) {
                                 <td><?= $row['fecha'] ?></td>
                                 <td><?= $row['cantidad'] ?></td>
                                 <td><?= $row['material'] ?></td>
+                                <td>
+                                    <a class="btn btn-warning" href="">
+                                        Editar <span class="mdi mdi-pencil-outline"></span>
+                                    </a>
+                                    <a class="btn btn-danger" href="">
+                                        Eliminar <span class="mdi mdi-trash-can-outline"></span>
+                                    </a>
+                                </td>
                             </tr>
                             <?php } ?>
                         </tbody>
