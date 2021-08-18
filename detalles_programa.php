@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <form action="" method="post" autocomplete="off">
+                            <form action="agregar_solicitud.php?id=<?=$_GET['id'] ?>" method="post" autocomplete="off"">
                                 <div class="form-group">
                                     <input class="form-control" type="number" name="cantidad" placeholder="Cantidad de fotocopias" required autofocus>
                                 </div>
