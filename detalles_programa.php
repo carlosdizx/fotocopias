@@ -50,7 +50,7 @@ if (isset($_GET['id'])) {
                                 <td><?= $row['cantidad'] ?></td>
                                 <td><?= $row['material'] ?></td>
                                 <td>
-                                    <a class="btn btn-warning" href="editar_solicitud.php?id=<?= $row['id']."&cantidad=".$row['cantidad']."&material=".$row['material']?>">
+                                    <a class="btn btn-warning" href="editar_solicitud.php?id=<?= $row['id']."&cantidad=".$row['cantidad']."&material=".$row['material']."&programa=".$_GET['id']?>">
                                         Editar <span class="mdi mdi-pencil-outline"></span>
                                     </a>
                                     <a class="btn btn-danger" href="eliminar_solicitud.php?id=<?= $row['id']."&codigo=".$_GET['id']?>">
